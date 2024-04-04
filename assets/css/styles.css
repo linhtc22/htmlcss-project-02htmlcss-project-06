@@ -57,7 +57,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: #efefef;
+  background-color: #fff;
   padding: 28px 0 13px;
 }
 
@@ -98,5 +98,89 @@ a {
   background: #143c3c;
   width: 16px;
   height: 2px;
-  bottom: -25px;
+  bottom: -30px;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+}
+
+.hero__body {
+  display: flex;
+  align-items: center;
+}
+
+.hero::before {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  content: '';
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #dddcdc 51.09%,
+    rgba(212, 212, 212, 0) 99.68%
+  );
+}
+
+.hero__content {
+  width: 35%;
+}
+
+.hero__heading {
+  max-width: 368px;
+  color: #152427;
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero__desc {
+  margin-top: 20px;
+  color: #575d5e;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.56;
+}
+
+.hero__row {
+  margin-top: 42px;
+  display: flex;
+  align-items: center;
+}
+
+.hero__play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #83a17d;
+}
+
+.hero__play span {
+  color: #152427;
+  font-family: Poppins;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.hero__media {
+  width: 65%;
+}
+
+.hero__images {
+  display: flex;
+}
+
+.hero__images {
+  object-fit: cover;
+  width: 202px;
+  height: 466px;
+  border-radius: 110px;
 }
