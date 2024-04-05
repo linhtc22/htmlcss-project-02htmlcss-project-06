@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+body,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Public Sans', sans-serif;
 }
@@ -63,8 +68,25 @@ a {
 
 .header-top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+.header-top::before {
+  position: absolute;
+  bottom: 0;
+  width: 1140px;
+  content: '';
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    #dddcdc 51.09%,
+    rgba(212, 212, 212, 0) 99.68%
+  );
+}
+
+.nav {
+  margin-left: auto;
 }
 
 .nav__list {
@@ -87,23 +109,27 @@ a {
 .nav__link--active,
 .nav__link:hover {
   color: #152427;
-  font-size: 1.8rem;
-  font-weight: 500;
 }
 
-.nav__link.nav__link--active::before {
+.nav__link.nav__link--active::after {
   position: absolute;
+  left: 19px;
+  bottom: -28px;
   content: '';
   display: inline-block;
   background: #143c3c;
   width: 16px;
   height: 2px;
-  bottom: -30px;
+}
+
+.header__btn {
+  margin-left: 69px;
 }
 
 /* Hero */
 .hero {
   position: relative;
+  margin-top: 60px;
 }
 
 .hero__body {
@@ -111,21 +137,8 @@ a {
   align-items: center;
 }
 
-.hero::before {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  content: '';
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    #fff 0%,
-    #dddcdc 51.09%,
-    rgba(212, 212, 212, 0) 99.68%
-  );
-}
-
 .hero__content {
+  flex-shrink: 0;
   width: 35%;
 }
 
@@ -138,6 +151,7 @@ a {
 }
 
 .hero__desc {
+  max-width: 341px;
   margin-top: 20px;
   color: #575d5e;
   font-size: 1.8rem;
@@ -146,9 +160,9 @@ a {
 }
 
 .hero__row {
-  margin-top: 42px;
   display: flex;
   align-items: center;
+  margin-top: 42px;
 }
 
 .hero__play {
@@ -163,24 +177,21 @@ a {
   background: #83a17d;
 }
 
-.hero__play span {
-  color: #152427;
-  font-family: Poppins;
-  font-size: 1.8rem;
-  font-weight: 600;
-}
-
 .hero__media {
   width: 65%;
+  margin-left: 76px;
+  flex-grow: 1;
 }
 
 .hero__images {
   display: flex;
-}
-
-.hero__images {
+  gap: 20px;
   object-fit: cover;
   width: 202px;
   height: 466px;
   border-radius: 110px;
+}
+
+.hero__img:nth-child(2) {
+  translate: 0 77px;
 }
