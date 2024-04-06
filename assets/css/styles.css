@@ -130,6 +130,7 @@ a {
 .hero {
   position: relative;
   margin-top: 60px;
+  padding: 0 0 165px;
 }
 
 .hero__body {
@@ -163,9 +164,41 @@ a {
   display: flex;
   align-items: center;
   margin-top: 42px;
+  cursor: pointer;
 }
 
 .hero__play {
+  display: flex;
+  align-items: center;
+  margin-left: 36px;
+}
+
+.hero__play:hover .hero__play--rotate {
+  rotate: 135deg;
+  border-color: #83a17d;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+}
+
+.hero__play:hover .hero__play--btn {
+  background: #143c3c;
+}
+
+.hero__play:hover .hero__play--text {
+  color: #83a17d;
+}
+
+.hero__play--rotate {
+  border: 4px solid #143c3c;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  rotate: -45deg;
+  padding: 4px;
+  transition: 0.25s;
+}
+
+.hero__play--btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -175,12 +208,37 @@ a {
   height: 44px;
   border-radius: 50%;
   background: #83a17d;
+  rotate: 45deg;
+  cursor: pointer;
+}
+
+.hero__play--text {
+  white-space: nowrap;
+  margin-left: 9px;
+  color: #152427;
+  font-family: Poppins;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.67;
 }
 
 .hero__media {
+  position: relative;
   width: 65%;
   margin-left: 76px;
   flex-grow: 1;
+}
+
+.hero__media--bg {
+  z-index: -1;
+  position: absolute;
+  top: 122px;
+  left: 203px;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background-color: #4dbb9a;
+  filter: blur(137px);
 }
 
 .hero__images {
@@ -194,4 +252,77 @@ a {
 
 .hero__img:nth-child(2) {
   translate: 0 77px;
+}
+
+.hero__icon {
+  position: absolute;
+  left: -207px;
+  top: -32px;
+}
+
+.hero__icon:last-child {
+  top: 242px;
+  left: 53px;
+  rotate: 180deg;
+}
+
+/* Brand */
+.brand {
+  padding-top: 42px;
+  font-family: Poppins;
+}
+
+.brand__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand__inner {
+  padding: 76px 121px;
+  border-radius: 100.5px;
+  background: #e2eddf;
+}
+
+.brand__item {
+  display: flex;
+  align-items: center;
+  transition: 0.25s;
+}
+
+.brand__item:hover {
+  scale: 1.1;
+}
+
+.brand__link--google {
+  color: #143c3c;
+  font-size: 3.1rem;
+  font-weight: 500;
+}
+
+.brand__link--slack {
+  margin-left: 5px;
+  color: #143c3c;
+  font-size: 3.2rem;
+  font-weight: 600;
+}
+
+.brand__link--agworld {
+  margin-left: 11px;
+  color: #163c35;
+  font-size: 2.6rem;
+}
+
+.brand__link--rioTinto {
+  color: #143c3c;
+  font-family: 'Sonsie One';
+  font-size: 2.3rem;
+}
+
+.brand__link--heroku {
+  margin-left: 14px;
+  color: #143c3c;
+  font-size: 1.9rem;
+  font-weight: 600;
+  letter-spacing: 1.995px;
 }
