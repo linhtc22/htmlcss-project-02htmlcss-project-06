@@ -114,7 +114,7 @@ a {
 .nav__link.nav__link--active::after {
   position: absolute;
   left: 19px;
-  bottom: -28px;
+  bottom: -29px;
   content: '';
   display: inline-block;
   background: #143c3c;
@@ -325,4 +325,127 @@ a {
   font-size: 1.9rem;
   font-weight: 600;
   letter-spacing: 1.995px;
+}
+
+/* Service */
+.service {
+  margin-top: 53px;
+  padding-top: 53px;
+  font-family: Poppins;
+}
+
+.service__sub {
+  position: relative;
+  margin-left: 46px;
+  color: #152427;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.63;
+}
+
+.service__sub::before {
+  position: absolute;
+  top: 9px;
+  left: -46px;
+  display: inline-block;
+  content: '';
+  width: 25px;
+  height: 1px;
+  background: #152427;
+}
+
+.service__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service__heading {
+  position: relative;
+  max-width: 520px;
+  margin-top: 12px;
+  color: #152427;
+  font-size: 4.2rem;
+  font-weight: 600;
+  line-height: 1.29;
+}
+
+.service__heading::after {
+  position: absolute;
+  bottom: 19px;
+  right: 103px;
+  display: inline-block;
+  content: '';
+  width: 66px;
+  height: 2px;
+  background: #152427;
+}
+
+.service__control {
+  display: flex;
+  gap: 17px;
+  align-items: flex-end;
+  margin: 0 73px 9px 0;
+}
+
+.control__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #e2eddf;
+  transition: 0.25s;
+}
+
+.control__btn:hover {
+  background: #143c3c;
+  color: #fff;
+}
+
+.service__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 76px;
+}
+
+.service-item {
+  border-radius: 20px;
+  transition: 0.25s;
+}
+
+.service-item:hover .service-item__info {
+  padding-left: 18px;
+  background: #fff;
+  box-shadow: -6px 9px 64px -4px rgba(118, 118, 118, 0.25);
+}
+
+.service-item__img {
+  object-fit: cover;
+  width: 370px;
+  height: 318px;
+  cursor: pointer;
+}
+
+.service-item__info {
+  padding: 24px 0;
+  transition: 0.25s;
+}
+
+.service-item__heading {
+  color: #152427;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.service-item__desc {
+  max-width: 268px;
+  margin-top: 18px;
+  color: #7d8188;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.71;
 }
